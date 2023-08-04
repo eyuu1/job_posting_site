@@ -12,4 +12,4 @@ const SharedNav = () => {
     );
 }
 
-export default SharedNav;
+export default  SharedNav;
