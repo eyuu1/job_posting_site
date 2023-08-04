@@ -1,19 +1,24 @@
-import './App.css'
-import Nav from './component/Navbar/Nav'
-import Logo from './component/Navbar/Logo'
-import Main from './component/Main/Main'
+import {BrowserRouter, Routes,Route} from "react-router-dom"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import Job from './pages/Job'
+import SharedNav from "./pages/SharedNav"
 
 function App() {
 
 
   return (
-    <>
-    <Main/>
-    {/* <Logo/> */}
-
-
-    </>
- 
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<SharedNav />}>
+        <Route index element={<Home />}/>
+        <Route path="/job" element={<Job />}/>
+        <Route path="aboutus" element={<About />}/>
+        <Route path="contactus" element={<Contact />}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
